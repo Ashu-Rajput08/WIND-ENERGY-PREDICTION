@@ -61,6 +61,17 @@ docker compose up --build -d
 
 Open [http://localhost:8000](http://localhost:8000). Check the service at [http://localhost:8000/api/health](http://localhost:8000/api/health). To view logs, run `docker compose logs -f`; to stop the app, run `docker compose down`.
 
+## Run the published Docker Hub image
+
+The built image is available at [Docker Hub](https://hub.docker.com/r/ashurajput08/wind-desk) as `ashurajput08/wind-desk:1.0.0`. On a computer with Docker Desktop installed, run:
+
+```powershell
+docker pull ashurajput08/wind-desk:1.0.0
+docker run --rm -p 8000:8000 ashurajput08/wind-desk:1.0.0
+```
+
+Then open [http://localhost:8000](http://localhost:8000). Press Ctrl+C in the terminal to stop the container. This runs the app on that computer; Docker Hub distributes the image but does not host a public dashboard URL.
+
 ## Run in development mode
 
 Requirements: Python 3.12 or compatible, Node.js 22.12 or newer, and npm.
